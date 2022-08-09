@@ -3,17 +3,19 @@ package immutable;
 import java.util.HashMap;
 import java.util.Map;
 
-//Class 1
 //An immutable class
+
+//Class is declared as final
 final class Student {
 	
-	// Member arrributes of final class
+	// Member arrributes of final class are declared private and final
     private final String name;
     private final int regNo;
     private final Map<String, String> metadata;
  
     // Constructor of immutable class
     // Parameterized constructor
+	//Set all the value through constructor
     public Student(String name, int regNo, Map<String, String> metadata)
     {
  
@@ -49,10 +51,7 @@ final class Student {
  
         // Creating Map with HashMap reference
         Map<String, String> tempMap = new HashMap<>();
- 
-//        for (Map.Entry<String, String> entry :this.metadata.entrySet()) {
-//            tempMap.put(entry.getKey(), entry.getValue());
-//        }
+
         
         for (Map.Entry<String,String> entry :this.metadata.entrySet()) {
             tempMap.put(entry.getKey(), entry.getValue());
